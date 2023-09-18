@@ -1,22 +1,17 @@
 ﻿using System.Diagnostics;
 
-namespace TinyMCSV
+namespace TinyMCSV.Utils
 {
-    public partial class About : Form
+    internal class OpenBrowser
     {
-        public About()
-        {
-            InitializeComponent();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public OpenBrowser(string url)
         {
             try
             {
                 Process.Start(
                     new ProcessStartInfo
                     {
-                        FileName = "https://github.com/michioxd/tinymcsv",
+                        FileName = url,
                         UseShellExecute = true
                     }
                 );

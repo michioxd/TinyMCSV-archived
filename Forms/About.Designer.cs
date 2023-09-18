@@ -36,7 +36,6 @@
             linkLabel1 = new LinkLabel();
             label4 = new Label();
             button1 = new Button();
-            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -106,22 +105,13 @@
             button1.TabIndex = 5;
             button1.Text = "Quit";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(227, 285);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "NGGYU";
-            button2.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // About
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(400, 322);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(linkLabel1);
@@ -133,7 +123,9 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "About";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "About TinyMCSV";
+            Load += About_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -148,6 +140,5 @@
         private LinkLabel linkLabel1;
         private Label label4;
         private Button button1;
-        private Button button2;
     }
 }

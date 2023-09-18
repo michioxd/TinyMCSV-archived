@@ -28,85 +28,215 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            listBox1 = new ListBox();
-            Main_Quit = new Button();
-            Main_Begin = new Button();
-            Main_Create = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            selectInstanceToolStripMenuItem = new ToolStripMenuItem();
+            selectInstanceToolStripMenuItem1 = new ToolStripMenuItem();
+            loadInstanceToolStripMenuItem = new ToolStripMenuItem();
+            createANewInstanceToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            quitToolStripMenuItem = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
+            tabPage3 = new TabPage();
+            tabPage4 = new TabPage();
+            tabPage5 = new TabPage();
+            menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
+            tabControl1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // menuStrip1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(325, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Welcome to TinyMCSV - Please select a instance to continue";
-            label1.Click += label1_Click;
+            menuStrip1.BackColor = SystemColors.ControlLightLight;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.RenderMode = ToolStripRenderMode.Professional;
+            menuStrip1.Size = new Size(701, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "TinyMCSV";
             // 
-            // listBox1
+            // fileToolStripMenuItem
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 36);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(419, 259);
-            listBox1.TabIndex = 2;
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectInstanceToolStripMenuItem, toolStripSeparator1, quitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
             // 
-            // Main_Quit
+            // selectInstanceToolStripMenuItem
             // 
-            Main_Quit.Location = new Point(356, 310);
-            Main_Quit.Name = "Main_Quit";
-            Main_Quit.Size = new Size(75, 23);
-            Main_Quit.TabIndex = 3;
-            Main_Quit.Text = "Quit";
-            Main_Quit.UseVisualStyleBackColor = true;
+            selectInstanceToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectInstanceToolStripMenuItem1, loadInstanceToolStripMenuItem, createANewInstanceToolStripMenuItem });
+            selectInstanceToolStripMenuItem.Name = "selectInstanceToolStripMenuItem";
+            selectInstanceToolStripMenuItem.Size = new Size(118, 22);
+            selectInstanceToolStripMenuItem.Text = "Instance";
             // 
-            // Main_Begin
+            // selectInstanceToolStripMenuItem1
             // 
-            Main_Begin.Location = new Point(275, 310);
-            Main_Begin.Name = "Main_Begin";
-            Main_Begin.Size = new Size(75, 23);
-            Main_Begin.TabIndex = 4;
-            Main_Begin.Text = "Begin";
-            Main_Begin.UseVisualStyleBackColor = true;
+            selectInstanceToolStripMenuItem1.Name = "selectInstanceToolStripMenuItem1";
+            selectInstanceToolStripMenuItem1.Size = new Size(189, 22);
+            selectInstanceToolStripMenuItem1.Text = "Select instance";
+            selectInstanceToolStripMenuItem1.Click += selectInstanceToolStripMenuItem1_Click;
             // 
-            // Main_Create
+            // loadInstanceToolStripMenuItem
             // 
-            Main_Create.Location = new Point(12, 310);
-            Main_Create.Name = "Main_Create";
-            Main_Create.Size = new Size(141, 23);
-            Main_Create.TabIndex = 5;
-            Main_Create.Text = "Create a new instance";
-            Main_Create.UseVisualStyleBackColor = true;
+            loadInstanceToolStripMenuItem.Name = "loadInstanceToolStripMenuItem";
+            loadInstanceToolStripMenuItem.Size = new Size(189, 22);
+            loadInstanceToolStripMenuItem.Text = "Load instance";
+            // 
+            // createANewInstanceToolStripMenuItem
+            // 
+            createANewInstanceToolStripMenuItem.Name = "createANewInstanceToolStripMenuItem";
+            createANewInstanceToolStripMenuItem.Size = new Size(189, 22);
+            createANewInstanceToolStripMenuItem.Text = "Create a new instance";
+            createANewInstanceToolStripMenuItem.Click += createANewInstanceToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(115, 6);
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(118, 22);
+            quitToolStripMenuItem.Text = "Exit";
+            quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
+            // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(52, 20);
+            helpToolStripMenuItem.Text = "About";
+            helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 420);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(701, 22);
+            statusStrip1.TabIndex = 1;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(263, 17);
+            toolStripStatusLabel1.Text = "No instance loadded, go to File > Select instance";
+            // 
+            // tabControl1
+            // 
+            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tabPage5);
+            tabControl1.Location = new Point(4, 27);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(697, 390);
+            tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(689, 362);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Info";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(689, 362);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Configuration";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(689, 362);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Plugins";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(689, 362);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Terminal";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(3);
+            tabPage5.Size = new Size(689, 362);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "Player";
+            tabPage5.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(443, 345);
-            Controls.Add(Main_Create);
-            Controls.Add(Main_Begin);
-            Controls.Add(Main_Quit);
-            Controls.Add(listBox1);
-            Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
+            ClientSize = new Size(701, 442);
+            Controls.Add(tabControl1);
+            Controls.Add(statusStrip1);
+            Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
+            MinimumSize = new Size(717, 481);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "TinyMCSV - Select instance";
+            Text = "TinyMCSV";
+            Load += Main_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
+            tabControl1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private ListBox listBox1;
-        private Button Main_Quit;
-        private Button Main_Begin;
-        private Button Main_Create;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private ToolStripMenuItem selectInstanceToolStripMenuItem;
+        private ToolStripMenuItem selectInstanceToolStripMenuItem1;
+        private ToolStripMenuItem loadInstanceToolStripMenuItem;
+        private ToolStripMenuItem createANewInstanceToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem quitToolStripMenuItem;
+        private TabPage tabPage3;
+        private TabPage tabPage4;
+        private TabPage tabPage5;
     }
 }
